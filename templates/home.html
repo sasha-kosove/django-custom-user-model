@@ -5,7 +5,7 @@
 {% block content %}
 <div class="d-flex flex-column mb-3">
 {% if user.is_authenticated %}
-    <p><h2>Hi {{ user.email }}!</h2></p>
+    <p><h2>Hi {{ user.get_short_name }}!</h2></p>
     <p><a href="{% url 'logout' %}">Log Out</a></p>
 {% else %}
     <p><h2>You are not logged in!</h2></p>
